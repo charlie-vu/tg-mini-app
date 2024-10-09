@@ -2,7 +2,7 @@
     <div class="min-vh-100 d-flex flex-column">
         <layout-header />
         <nuxt class="flex-grow-1 py-4 mb-5" />
-        <layout-footer class="position-fixed bottom-0 vw-100" />
+        <layout-footer />
 
         <layout-side-menu />
 
