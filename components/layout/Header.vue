@@ -1,6 +1,9 @@
 <template>
-  <div class="bg-primary gradient-white-30-20 text-white text-center position-relative min-h-64px">
-    <b-button class="position-absolute right-0 top-50 translate-middle-y mx-3" @click="$store.dispatch('toggleMenu')">
+  <div class="bg-primary gradient-white-30-20 text-white p-2 text-right">
+    <b-button v-if="$route.path !== '/'" @click="$router.go(-1)">
+      <b-icon icon="arrow-left-circle" scale="1.5" />
+    </b-button>
+    <b-button @click="$store.dispatch('toggleMenu')">
       <b-icon :icon="$store.getters.showMenu ? 'x' : 'list'" scale="1.5" />
     </b-button>
     <!-- <div class="d-flex w-fit mx-auto">
