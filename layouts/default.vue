@@ -21,12 +21,7 @@ export default {
             this.$store.dispatch('setMenuList', menuList)
         }, 500)
 
-        console.log(this.$tw)
-        if (this.$tw) {
-            // Initializing the Telegram WebApp SDK
-            this.$tw.expand()
-            this.$tw.MainButton.setText("Send Hello").show()
-        }
+        // console.log(this.$tw)
     },
 }
 

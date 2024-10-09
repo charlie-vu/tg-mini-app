@@ -1,6 +1,6 @@
 <template>
     <div class="bg-dark text-white">
-        <div class="p-2 text-center gradient-white-80-20">
+        <div class="p-2 text-center gradient-white-80-20 min-h-32px">
             <!-- <b-button @click="$store.dispatch('toggleMenu')">
                 <b-icon :icon="$store.getters.showMenu ? 'x' : 'list'" scale="1.5" />
             </b-button> -->
