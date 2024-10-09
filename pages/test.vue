@@ -50,7 +50,7 @@
                 </b-card>
             </b-col>
             <b-col>
-                <b-card>
+                <b-card class="fs-14px fs-lg-16px">
                     <p>i18n (refresh page to test $cookies (js-cookie))</p>
                     <b-form-group :label="$t('locale')" label-cols="2" class="mt-3" label-class="fw-700">
                         <b-select v-model="$i18n.locale" :options="$i18n.localeOptions"
