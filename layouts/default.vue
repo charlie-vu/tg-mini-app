@@ -1,8 +1,8 @@
 <template>
     <div class="min-vh-100 d-flex flex-column">
         <layout-header />
-        <nuxt class="flex-grow-1 py-4" />
-        <layout-footer />
+        <nuxt class="flex-grow-1 py-4 mb-5" />
+        <layout-footer class="position-fixed bottom-0 vw-100" />
 
         <layout-side-menu />
 
@@ -20,6 +20,13 @@ export default {
         setTimeout(() => {
             this.$store.dispatch('setMenuList', menuList)
         }, 500)
+
+        console.log(this.$tw)
+        if (this.$tw) {
+            // Initializing the Telegram WebApp SDK
+            this.$tw.expand()
+            this.$tw.MainButton.setText("Send Hello").show()
+        }
     },
 }
 

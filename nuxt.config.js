@@ -19,7 +19,10 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+    script: [
+      { src: 'https://telegram.org/js/telegram-web-app.js', async: true, defer: true },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -29,14 +32,16 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/telegram.js',
+
     '~/plugins/js-cookie.js',
 
     '~/plugins/axios.js',
     '~/plugins/axios-append.js',
-    
+
     '~/plugins/screen.js',
     '~/plugins/bv-modal.js',
-    
+
     '~/plugins/dayjs.js',
     '~/plugins/lodash.js',
     '~/plugins/i18n.js',

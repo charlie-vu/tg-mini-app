@@ -3,7 +3,7 @@
         <h2 class="fs-16px fs-lg-32px"><a href="https://dummyjson.com/docs/products" target="_blank">https://dummyjson.com/docs/products</a></h2>
 
         <div class="w-50 mt-3">
-            <b-form-group label="Size:" label-cols="2">
+            <b-form-group label="Size:" label-cols="4">
                 <b-select v-model="perPage" :options="perPageOptions" @change="onChangePerPage" />
             </b-form-group>
         </div>
@@ -59,7 +59,7 @@ export default {
                 limit: this.perPage,
                 skip: this.perPage * (this.currentPage - 1),
             }
-            this.$axios.get(this.$apiAppend.products, { params }).then((res) => {
+            this.$axios.get('https://dummyjson.com/products', { params }).then((res) => {
                 // console.log(res)
                 const data = res.data
                 console.log(`PRODUCT LIST:: `, data)

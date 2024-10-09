@@ -1,7 +1,9 @@
 <template>
     <div class="bg-dark text-white">
-        <div class="px-3 py-4 text-right gradient-white-80-20">
-            <p>class="gradient-white-80-20"</p>
+        <div class="p-2 text-center gradient-white-80-20">
+            <b-button @click="$store.dispatch('toggleMenu')">
+                <b-icon :icon="$store.getters.showMenu ? 'x' : 'list'" scale="1.5" />
+            </b-button>
         </div>
     </div>
 </template>
@@ -10,6 +12,9 @@
 export default {
     data() {
         return {}
+    },
+    mounted() {
+        // console.log(window.Telegram.WebApp)
     },
 }
 </script>

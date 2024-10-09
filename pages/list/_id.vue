@@ -51,7 +51,7 @@ export default {
     methods: {
         fetchData() {
             this.$store.dispatch('startLoading')
-            this.$axios.get(this.$apiAppend.productId(this.$route.params.id)).then((res) => {
+            this.$axios.get(`https://dummyjson.com/products/${this.$route.params.id}`).then((res) => {
                 const data = res.data
                 console.log(data)
                 this.detail = data
