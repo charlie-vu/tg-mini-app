@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-primary gradient-white-30-20 text-white p-2 text-right">
+  <div class="bg-primary gradient-white-30-20 text-white p-2 text-right sticky-top">
     <b-button v-if="$route.path !== '/'" @click="$router.go(-1)">
       <b-icon icon="arrow-left-circle" scale="1.5" />
     </b-button>

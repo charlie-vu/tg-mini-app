@@ -5,7 +5,7 @@
 
         <div v-if="detail" class="mt-3 py-4">
             <b-row>
-                <b-col cols="8">
+                <b-col cols="12">
                     <b-img :src="detail.thumbnail" class="w-100 rounded-lg" />
                 </b-col>
                 <b-col>
@@ -21,8 +21,8 @@
                 </b-col>
             </b-row>
 
-            <div class="border-top border-bottom border-primary mt-4 py-4">
-                <b-row cols="6" class="row-gap-32px">
+            <div v-if="detail.images?.length" class="border-top border-bottom border-primary mt-4 py-4">
+                <b-row cols="2" class="row-gap-32px">
                     <b-col v-for="(item, index) in detail.images" :key="index">
                         <div class="w-100 h-100 d-flex flex-center bg-secondary p-2 rounded-lg cursor-pointer"
                             @click="previewImg(item)">

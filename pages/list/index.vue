@@ -33,7 +33,7 @@ export default {
             fields: [
                 { key: 'id', label: 'ID', sortable: true, },
                 { key: 'title', label: 'TITLE', class: 'text-wrap' },
-                { key: 'description', label: 'DESCRIPTION', class: 'text-wrap' },
+                { key: 'description', label: 'DESCRIPTION', class: 'text-wrap', tdClass: 'min-w-400px' },
                 { key: 'price', label: 'PRICE', sortable: true, formatter: (val) => this.$common.displayNumber(val, '원') },
                 { key: 'discountPercentage', label: 'DISCOUNT', sortable: true, formatter: (val) => `${val || '-'} %` },
                 { key: 'rating', label: 'RATING', sortable: true },
