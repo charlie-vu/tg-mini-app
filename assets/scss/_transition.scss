@@ -3,7 +3,7 @@
   transition: all 0.3s;
 }
 .layout-enter,
-.layout-leave-active {
+.layout-leave-to {
   transform: scale(0.9);
   opacity: 0;
 }
@@ -13,7 +13,7 @@
   transition: all 0.3s;
 }
 .page-enter,
-.page-leave-active {
+.page-leave-to {
   transform: translateX(1rem);
   opacity: 0;
 }
@@ -23,7 +23,17 @@
   transition: all 0.3s;
 }
 .flip-y-enter,
-.flip-y-leave-active {
+.flip-y-leave-to {
   transform: rotateY(90deg);
   opacity: 0;
+}
+
+.slide-down-enter-active,
+.slide-down-leave-active {
+  transition: all 0.3s;
+}
+
+.slide-down-enter,
+.slide-down-leave-to {
+  transform: translateY(-100%);
 }

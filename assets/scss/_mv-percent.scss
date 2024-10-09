@@ -56,6 +56,9 @@
     .#{$anchor}-#{$pct} {
       #{$anchor}: $pct * 1% !important;
     }
+    .#{$anchor}-n#{$pct} {
+      #{$anchor}: $pct * -1% !important;
+    }
   }
 
   // Opacity
